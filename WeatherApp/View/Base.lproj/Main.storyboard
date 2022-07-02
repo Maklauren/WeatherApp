@@ -40,7 +40,7 @@
                                                 <color key="backgroundColor" systemColor="systemFillColor"/>
                                                 <color key="tintColor" name="weatherColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="go"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDq-2R-G9R">
                                                 <rect key="frame" x="334" y="0.5" width="40" height="38.5"/>
@@ -50,6 +50,9 @@
                                                 </constraints>
                                                 <color key="tintColor" name="weatherColor"/>
                                                 <state key="normal" backgroundImage="magnifyingglass" catalog="system"/>
+                                                <connections>
+                                                    <action selector="searchButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NqF-J6-aKK"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -121,6 +124,7 @@
                     <connections>
                         <outlet property="cityLabel" destination="jPx-37-xa8" id="KNr-Vc-zxo"/>
                         <outlet property="conditionImageView" destination="e0Z-FM-ffS" id="jNP-ef-WBQ"/>
+                        <outlet property="searchTextField" destination="3xz-TP-qXe" id="UUg-TJ-QhC"/>
                         <outlet property="temperatureLabel" destination="Pel-rF-Vnm" id="mmW-Kq-1MB"/>
                     </connections>
                 </viewController>
