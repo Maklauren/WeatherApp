@@ -56,7 +56,11 @@ extension WeatherViewController: UITextFieldDelegate {
 
 extension WeatherViewController: WeatherManagerDelegate {
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
-        print(weather.temperature)
+        DispatchQueue.main.async {
+            self.conditionImageView.image = UIImage(systemName: weather.conditionName)
+            self.temperatureLabel.text = weather.temperatureString
+            self.cityLabel.text = weather.cityName
+        }
     }
     
     func didFailWithError(_ error: Error) {
