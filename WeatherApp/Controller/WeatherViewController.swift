@@ -58,4 +58,8 @@ extension WeatherViewController: WeatherManagerDelegate {
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
         print(weather.temperature)
     }
+    
+    func didFailWithError(_ error: Error) {
+        print(error)
+    }
 }
